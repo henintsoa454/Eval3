@@ -1,0 +1,109 @@
+﻿@model Tuple<List<Evaluation_3.Models.Entity.Bien>, List<Evaluation_3.Models.Entity.Client>>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<style>
+    body {
+        background-color: #1e1e1e;
+        color: #cfcfcf;
+        font-family: Arial, sans-serif;
+    }
+    .import-form {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #2c2c2c;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .import-form h1 {
+        text-align: center;
+        color: #f0f0f0;
+        margin-bottom: 20px;
+    }
+    .import-form label {
+        display: block;
+        margin-bottom: 8px;
+        color: #a8a8a8;
+    }
+    .import-form select, 
+    .import-form input[type="number"], 
+    .import-form input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        background-color: #3c3c3c;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+    }
+    .import-form select:focus, 
+    .import-form input[type="number"]:focus, 
+    .import-form input[type="date"]:focus {
+        outline: none;
+        box-shadow: 0 0 5px #4caf50;
+    }
+    .import-form button {
+        display: block;
+        width: 50%;
+        padding: 10px;
+        margin: 20px auto;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .import-form button:hover {
+        background-color: #45a049;
+    }
+    .import-form div {
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="import-form">
+    <h1>Ajout d'une Location</h1>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <form asp-controller="Admin" asp-action="insertionLocation" method="post">
+        <div>
+            <label for="idClient">Client</label>
+            <select id="idClient" name="IdClient" required>
+                @foreach (var client in Model.Item2)
+                {
+                    <option value="@client.Id">@client.Email</option>
+                }
+            </select>
+        </div>
+        <div>
+            <label for="idBien">Bien</label>
+            <select id="idBien" name="IdBien" required>
+                @foreach (var bien in Model.Item1)
+                {
+                    <option value="@bien.Id">@bien.Nom</option>
+                }
+            </select>
+        </div>
+        <div>
+            <label for="duree">Durée (mois)</label>
+            <input type="number" min="1" id="duree" name="Duree" required>
+        </div>
+        <div>
+            <label for="dateDebut">Date de début</label>
+            <input type="date" id="dateDebut" name="DateDebut" required>
+        </div>
+        <div>
+            <button type="submit">Créer la location</button>
+        </div>
+    </form>
+</div>

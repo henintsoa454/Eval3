@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Evaluation_3.Models.Entity.Additional.RapportRevenue>
+@{
+    Layout = "_ProprietaireLayout";
+    ViewBag.Title = "Chiffre d'affaires";
+    var totalRevenue = Model.Sum(item => item.Loyer);
+    var totalCommission = Model.Sum(item => item.Revenue);
+    var chiffreAffaire = totalRevenue - totalCommission;
+}
+<h2 class="mt-4">Chiffre d'affaires</h2>
+<table class="table table-hover table-bordered mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>Année</th>
+            <th>Mois</th>
+            <th>Client</th>
+            <th>Bien</th>
+            <th>Loyer</th>
+            <th>Commission</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Year</td>
+                <td>@item.GetMonthName()</td>
+                <td>@item.client</td>
+                <td>@item.bien</td>
+                <td>@item.Loyer.ToString("C")</td>
+                <td>@item.Commission %</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="total">
+    <p><strong>Chiffre d'affaires: </strong> @chiffreAffaire.ToString("C")</p>
+</div>

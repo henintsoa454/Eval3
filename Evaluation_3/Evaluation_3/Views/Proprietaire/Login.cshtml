@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "Login Propriétaire";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriétaire Login</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+        .login-wrapper {
+            min-height: 100vh;
+        }
+        .login-container {
+            max-width: 800px;
+        }
+        .img-container img {
+            object-fit: cover;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid login-wrapper d-flex align-items-center justify-content-center">
+        <div class="row login-container shadow-lg rounded overflow-hidden">
+            <div class="col-md-6 p-0 img-container">
+                <img src="~/img/propriétaire_illustration (2).jfif" alt="Propriétaire Illustration" class="img-fluid">
+            </div>
+            <div class="col-md-6 p-4 d-flex flex-column justify-content-center bg-light">
+                <h2 class="text-center mb-4">Bienvenue aux propriétaires</h2>
+                <form asp-controller="Proprietaire" asp-action="checkLogin" method="post">
+                    <div class="form-group">
+                        <label for="numeroTel" class="form-label">Numéro de téléphone</label>
+                        <input type="text" class="form-control" id="numeroTel" name="numeroTel" placeholder="Enter phone number" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

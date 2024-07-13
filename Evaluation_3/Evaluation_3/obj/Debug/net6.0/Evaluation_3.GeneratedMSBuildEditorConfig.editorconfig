@@ -1,0 +1,140 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Evaluation_3
+build_property.RootNamespace = Evaluation_3
+build_property.ProjectDir = C:\Users\Lenovo\source\repos\Evaluation_3\Evaluation_3\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Lenovo\source\repos\Evaluation_3\Evaluation_3
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Admin/ChiffreAffaireGain.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hpZmZyZUFmZmFpcmVHYWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Admin/ChiffreAffaireGainFiltre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hpZmZyZUFmZmFpcmVHYWluRmlsdHJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Admin/ChiffreAffaireGainIntervalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hpZmZyZUFmZmFpcmVHYWluSW50ZXJ2YWxsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Admin/DashBoard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaEJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Admin/DetailListeLocation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsTGlzdGVMb2NhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Admin/FormAjoutLocation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRm9ybUFqb3V0TG9jYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Admin/FormImportDonnée.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRm9ybUltcG9ydERvbm7DqWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Admin/ListeLocation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdGVMb2NhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Admin/ReinitialisationDonnée.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVpbml0aWFsaXNhdGlvbkRvbm7DqWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Client/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEhvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Client/ListeLoyer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XExpc3RlTG95ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Client/ListeLoyerFiltre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XExpc3RlTG95ZXJGaWx0cmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Client/ListeLoyerIntervalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XExpc3RlTG95ZXJJbnRlcnZhbGxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Client/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Proprietaire/ChiffreAffaire.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcHJpZXRhaXJlXENoaWZmcmVBZmZhaXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Proprietaire/ChiffreAffaireFiltre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcHJpZXRhaXJlXENoaWZmcmVBZmZhaXJlRmlsdHJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Proprietaire/ChiffreAffaireIntervalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcHJpZXRhaXJlXENoaWZmcmVBZmZhaXJlSW50ZXJ2YWxsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Proprietaire/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcHJpZXRhaXJlXEhvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Proprietaire/ListeBien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcHJpZXRhaXJlXExpc3RlQmllbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Proprietaire/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcHJpZXRhaXJlXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Shared/_ClientLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DbGllbnRMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Shared/_ProprietaireLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9wcmlldGFpcmVMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/Evaluation_3/Evaluation_3/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-g89gsm0yya

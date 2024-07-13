@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Evaluation_3.Models.Entity.Additional.RapportRevenue>
+
+@{
+    Layout = "_ClientLayout";
+    var totalRevenue = Model.Sum(item => item.Loyer);
+    var totalCommission = Model.Sum(item => item.Revenue);
+    var chiffreAffaire = totalRevenue - totalCommission;
+    double totalImpaye = 0;
+    double totalPaye = 0;
+}
+
+<h2>Liste des Loyer</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Bien</th>
+            <th>Date</th>
+            <th>Loyer</th>
+            <th>Payement</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            DateTime datelocation = new DateTime(item.Year, item.Month, 1);
+            if (datelocation <= DateTime.Now)
+            {
+                totalPaye += item.Loyer;
+                <tr>
+                    <td class="table-success">@item.bien</td>
+                    <td class="table-success">@item.GetMonthName()  @item.Year</td>
+                    <td class="table-success">@item.Loyer</td>
+                    <td class="table-success">Payé</td>
+                </tr>
+            }
+            else
+            {
+                 totalImpaye += item.Loyer;
+                <tr>
+                    <td class="table-danger">@item.bien</td>
+                    <td class="table-danger">@item.GetMonthName()  @item.Year</td>
+                    <td class="table-danger">@item.Loyer.ToString("C")</td>
+                    <td class="table-danger">Non payé</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<div class="total">
+    <p style="color:red"><strong>Total non payé: </strong>@totalImpaye.ToString("C")</p>
+    <p style="color:green"><strong>Total payé: </strong>@totalPaye.ToString("C")</p>
+    <p><strong>Total: </strong>@totalRevenue.ToString("C")</p>
+</div>

@@ -1,0 +1,53 @@
+﻿@model Evaluation_3.Models.Entity.Proprietaire
+@{
+    Layout = "_ProprietaireLayout";
+    ViewBag.Title = "Liste des biens";
+}
+<h2 class="mt-4">Liste des Biens</h2>
+<div class="row">
+    @foreach (var bien in Model.Biens)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div id="carousel-@bien.Id" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach (var photo in bien.Photobiens)
+                        {
+                            <div class="carousel-item @(photo == bien.Photobiens.First() ? "active" : "")">
+                                <img src="@Url.Content(photo.IdphotoNavigation.Path)" class="d-block w-100 img-fluid fixed-size-image" style="object-fit: cover;" alt="Property Image">
+                            </div>
+                        }
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel-@bien.Id" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-@bien.Id" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@bien.Nom</h5>
+                    <p class="card-text">@bien.Description</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Loyer Mensuel: @bien.Loyermensuel.ToString("C")</li>
+                        <li class="list-group-item">Région: @bien.IdregionNavigation.Nom</li>
+                        <li class="list-group-item">Type: @bien.IdtypeNavigation.Nom</li>
+                        <li class="list-group-item">Date disponibilité: @bien.getDateDisponibilité().ToString("dd/MM/yyyy")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Script {
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .fixed-size-image {
+            width: 100%;
+            height: 200px; /* Ajustez cette valeur selon vos besoins */
+        }
+    </style>
+}

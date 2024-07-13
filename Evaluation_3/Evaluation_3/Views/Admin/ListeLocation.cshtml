@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Evaluation_3.Models.Entity.Location>
+@{
+    Layout = "_AdminLayout";
+    ViewBag.Title = "Liste des locations";
+}
+<h2 class="mt-4">Liste des locations</h2>
+<table class="table table-hover table-bordered mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>Année</th>
+            <th>Mois</th>
+            <th>Client</th>
+            <th>Bien</th>
+            <th>Duree</th>
+            <th>Loyer Mensuel</th>
+            <th>Pourcentage commission</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="color:white">
+                <td>@item.Datedebut.Year</td>
+                <td>@item.Datedebut.Month</td>
+                <td>@item.IdclientNavigation.Nom</td>
+                <td>@item.IdbienNavigation.Nom</td>
+                <td>@item.Duree</td>
+                <td>@item.IdbienNavigation.Loyermensuel.ToString("C")</td>
+                <td>@item.IdbienNavigation.IdtypeNavigation.Commission %</td>
+                <td><a style='text-decoration:none' href="@Url.Action("DetailListeLocation", "Admin", new { idlocation = @item.Id})">Voir les détails</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

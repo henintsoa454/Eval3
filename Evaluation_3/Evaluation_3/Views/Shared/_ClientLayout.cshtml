@@ -1,0 +1,142 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
+    var clientId = HttpContextAccessor.HttpContext.Session.GetInt32("ClientId");
+    if (clientId == null)
+    {
+        HttpContextAccessor.HttpContext.Response.Redirect(Url.Action("Login", "Client"));
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 280px;
+            height: calc(100vh - 56px);
+            position: fixed;
+            top: 56px;
+            left: 0;
+            background-color: #f8f9fa;
+            padding-top: 1rem;
+            overflow-y: auto;
+            border-right: 1px solid #dee2e6;
+        }
+
+        .main-content {
+            margin-left: 280px;
+            margin-top: 56px;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            min-height: calc(100vh - 56px);
+        }
+
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: #f8f9fa;
+        }
+
+        .nav-link {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            background-color: #e9ecef;
+            color: #000;
+        }
+
+        .submenu-icon::after {
+            content: " ▼";
+            float: right;
+        }
+
+        .btn-toggle-nav a {
+            padding-left: 3rem;
+            text-decoration: none;
+        }
+
+        .btn-toggle-nav a:hover {
+            text-decoration: none;
+            background-color: #e9ecef;
+        }
+        .btn-logout {
+            background-color: #ff4757;
+            border-color: #ff4757;
+            color: #fff;
+        }
+        .btn-logout:hover {
+            background-color: #e84118;
+            border-color: #e84118;
+            color: #fff;
+        }
+        .btn-logout a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="d-flex flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom bg-light header">
+        <div class="ms-3">
+            <span class="h4">Client</span>
+        </div>
+        <div class="d-flex me-3">
+            @*<form class="d-flex me-3">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>*@
+            <button type="button" class="btn btn-logout me-2">
+                <a href="@Url.Action("Logout", "Client")">Logout</a>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <ul class="nav nav-pills flex-column mb-auto">
+            @*<li class="nav-item">
+                <a href="@Url.Action("ListeLoyerIntervalle","Client",new { idclient = clientId })" class="nav-link link-dark">
+                    Liste des Loyers
+                </a>
+            </li>*@
+            <li class="nav-item">
+                <a href="@Url.Action("ListeLoyerFiltre","Client",new { idclient = clientId })" class="nav-link link-dark">
+                    Liste des Loyers
+                </a>
+            </li>
+            @*<li>
+                <a href="#submenu" data-bs-toggle="collapse" class="nav-link link-dark submenu-icon">
+                    Reports
+                </a>
+                <div class="collapse" id="submenu">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark rounded">Daily</a></li>
+                        <li><a href="#" class="link-dark rounded">Monthly</a></li>
+                        <li><a href="#" class="link-dark rounded">Yearly</a></li>
+                    </ul>
+                </div>
+            </li>*@
+        </ul>
+    </div>
+
+    <div class="main-content">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

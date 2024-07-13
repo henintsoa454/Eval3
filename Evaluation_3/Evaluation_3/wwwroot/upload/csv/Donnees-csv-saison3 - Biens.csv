@@ -1,0 +1,5 @@
+reference,nom,Description,Type,region,loyer mensuel,Proprietaire
+V110,Villa luxe en bord de mer,"Magnifique villa de 250 m² avec vue imprenable sur la mer. Elle comprend 5 chambres, un grand séjour, une cuisine haut de gamme, et une piscine à débordement. Accès direct à la plage.",Villa,Boeny,1890000,0340089076
+V130,Villa Provençale avec Jardin,"Dans un cadre enchanteur, cette villa de 200 m² propose 4 chambres, un salon spacieux, une cuisine équipée, et un jardin de 1000 m² avec arbre fruitier. Un havre de paix",Villa,Analamanga,2500000,0327790045
+M340,Maison Contemporaine en Ville,"Découvrez cette maison de ville de 150 m², entièrement rénovée avec des matériaux de qualité. Elle comprend 3 chambres, un vaste séjour avec baies vitrées, une cuisine ouverte, et une terrasse ensoleillée. Proche des commerces et transports.",Maison,Analamanga,2200000,0340089076
+I003,Immeuble Neuf avec Commerces au Rez-de-Chaussée,"Immeuble moderne de 700 m², comprenant 6 appartements de haut standing et 2 commerces au rez-de-chaussée. Construction récente avec matériaux de qualité. Emplacement stratégique.",Immeuble,Vakinankaratra,4570000,0331178009

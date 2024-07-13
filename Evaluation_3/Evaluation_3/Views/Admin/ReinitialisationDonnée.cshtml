@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Réinitialisation des Données";
+}
+@{
+    Layout = "_AdminLayout";
+}
+
+<style>
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    .btn-reset {
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-reset:hover {
+        background-color: darkred;
+    }
+    .vh-75 {
+        min-height: 75vh;
+    }
+</style>
+
+<div class="container d-flex flex-column align-items-center justify-content-center vh-75">
+    <h2 class="text-center mb-4">Réinitialisation des Données</h2>
+
+    <form asp-controller="Admin" asp-action="Reinitialiser" method="post" class="d-flex justify-content-center">
+        <button type="submit" class="btn-reset">
+            Réinitialisation
+        </button>
+    </form>
+</div>

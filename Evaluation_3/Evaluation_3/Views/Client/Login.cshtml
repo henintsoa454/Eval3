@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "Login Client";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Login</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+        .login-wrapper {
+            min-height: 100vh;
+        }
+        .login-container {
+            max-width: 800px;
+        }
+        .img-container img {
+            object-fit: cover;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid login-wrapper d-flex align-items-center justify-content-center">
+        <div class="row login-container shadow-lg rounded overflow-hidden">
+            <!-- Illustration Image -->
+            <div class="col-md-6 p-0 img-container">
+                <img src="~/img/client_illustration (3).jfif" alt="Client Illustration" class="img-fluid">
+            </div>
+            <!-- Login Form -->
+            <div class="col-md-6 p-4 d-flex flex-column justify-content-center bg-light">
+                <h2 class="text-center mb-4">Bienvenue aux Clients</h2>
+                <form asp-controller="Client" asp-action="checkLogin" method="post">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
+    var adminId = HttpContextAccessor.HttpContext.Session.GetInt32("AdminId");
+    if (adminId == null)
+    {
+        HttpContextAccessor.HttpContext.Response.Redirect(Url.Action("Login", "Admin"));
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .content {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            width: 280px;
+            background-color: #343a40;
+        }
+        .main-content {
+            flex: 1;
+            background-color: #343a40;
+        }
+        .nav-link:hover {
+            background-color: #495057;
+        }
+        .submenu-icon::after {
+            content: " ▼";
+            float: right;
+        }
+        .submenu-item {
+            padding-left: 4rem;
+        }
+        .form-control {
+            max-width: 200px;
+        }
+        .btn-logout {
+            background-color: #ff4757;
+            border-color: #ff4757;
+            color: #fff;
+        }
+        .btn-logout:hover {
+            background-color: #e84118;
+            border-color: #e84118;
+            color: #fff;
+        }
+        .btn-logout a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="~/img/admin-logo.jpg" alt="Logo" width="40" height="32" class="me-2">
+                    <span class="fs-4">MADA IMMO</span>
+                </a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-8"></ul>
+                @*<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" style="display: flex;">
+                    <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                    <button type="button" class="btn btn-warning">Search</button>
+                </form>*@
+                <div class="text-end">
+                    <button type="button" class="btn btn-logout me-2">
+                        <a href="@Url.Action("Logout", "Admin")">Logout</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidebar">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="@Url.Action("FormAjoutLocation", "Admin")" class="nav-link text-white">
+                        Ajouter une nouvelle location
+                    </a>
+                </li>
+                @*<li>
+                     <a href="@Url.Action("ChiffreAffaireGainIntervalle", "Admin")" class="nav-link text-white">
+                        Chiffre d'affaires et gains(Backup)
+                    </a>
+                </li>*@
+                <li>
+                     <a href="@Url.Action("ChiffreAffaireGainFiltre", "Admin")" class="nav-link text-white">
+                        Chiffre d'affaires et gains
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("FormImportDonnée", "Admin")" class="nav-link text-white">
+                        Importation de données
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("ReinitialisationDonnée", "Admin")" class="nav-link text-white">
+                        Réinitialisation des données
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("ListeLocation", "Admin")" class="nav-link text-white">
+                        Liste des locations
+                    </a>
+                </li>
+               @* <li>
+                    <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-white submenu-icon">
+                        Settings
+                    </a>
+                    <div class="collapse" id="submenu1">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-3 small">
+                            <li><a href="#" class="nav-link text-white submenu-item">Profile</a></li>
+                            <li><a href="#" class="nav-link text-white submenu-item">Security</a></li>
+                            <li><a href="#" class="nav-link text-white submenu-item">Notifications</a></li>
+                        </ul>
+                    </div>
+                </li>*@
+            </ul>
+        </div>
+        <div class="main-content p-3">
+            @RenderBody()
+        </div>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
